@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply bg-paper font-sans text-ink antialiased; }
+  h1, h2, h3, .font-display { @apply font-serif font-medium tracking-tight; }
+  ::selection { @apply bg-sand-300 text-ink; }
+  :focus-visible { @apply outline-2 outline-offset-2 outline-ink; }
+}
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-7xl px-5 sm:px-8; }
+  .eyebrow { @apply text-xs font-medium uppercase tracking-wider2 text-ink-muted; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-none border px-6 py-3 text-sm font-medium tracking-wide transition-colors disabled:cursor-not-allowed disabled:opacity-50; }
+  .btn-primary { @apply btn border-ink bg-ink text-paper hover:bg-ink-soft; }
+  .btn-outline { @apply btn border-ink text-ink hover:bg-ink hover:text-paper; }
+  .btn-light { @apply btn border-paper bg-paper text-ink hover:bg-sand-200 hover:border-sand-200; }
+  .btn-whatsapp { @apply btn border-[#1f8f4e] bg-[#1f8f4e] text-white hover:bg-[#187a42]; }
+  .btn-sm { @apply px-4 py-2 text-xs; }
+  .input { @apply w-full border border-paper-line bg-white px-4 py-3 text-sm text-ink placeholder:text-ink-muted/70 focus:border-ink focus:outline-none; }
+  .input-error { @apply border-red-600; }
+  .label { @apply mb-1.5 block text-xs font-medium uppercase tracking-wide text-ink-soft; }
+  .card { @apply border border-paper-line bg-white; }
+}
